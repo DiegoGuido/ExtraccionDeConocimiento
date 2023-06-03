@@ -22,7 +22,7 @@ if(price < 100){
   print(">100")
 }
 
-price <- c(58,100,110)
+price <- c(58,500,110)
 
 
 
@@ -40,8 +40,8 @@ days <- function(x){
          "Weekend")
 }
 
-days("Monday")
-days(7)
+days("Mon")
+days(1)
 
 quantity <- c(1,2,3,4,5)
 
@@ -85,7 +85,7 @@ repeat{
   }
 }
 
-setwd("C:\\Users\\CC7\\Downloads")
+setwd("C:\\Users\\Informatica\\Downloads")
 maraton <- read.csv("maraton_ny.csv",
                     header = TRUE,
                     row.names = 1,
@@ -98,8 +98,17 @@ names(maraton)
 View(maraton)
 dim(maraton)
 str(maraton)
-nrow
+nrow(maraton)
 install.packages("dplyr")
 library("dplyr")
 glimpse(maraton)
 summary(maraton)
+
+head(maraton, 3)
+tail(maraton, 3)
+
+install.packages("RWeka")
+library("RWeka")
+
+setwd("C:\\")
+datos <- read.arff("CEE_DATA.arff")
